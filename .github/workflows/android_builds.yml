@@ -8,11 +8,11 @@ on:
       target_arch:
         required: false
         type: string
-        default: arm64-v8a
+        default: x86
       prefix_arch:
         required: false
         type: string
-        default: arm64
+        default: x86
 
 # Global Settings
 # SCONS_CACHE for windows must be set in the build environment
