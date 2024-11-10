@@ -8,11 +8,11 @@ on:
       target_arch:
         required: false
         type: string
-        default: x86
+        default: x86_64
       prefix_arch:
         required: false
         type: string
-        default: x86-64
+        default: x86_64
 
 # Global Settings
 # SCONS_CACHE for windows must be set in the build environment
@@ -95,9 +95,6 @@ jobs:
           TARGET_ARCH: ${{ matrix.target_arch }}
         run: |
           make ffmpeg
-      - name: output log
-        run: |
-          cat ./ffmpeg-kit/build.log
 
       - name: Compilation
         uses: ./.github/actions/build
