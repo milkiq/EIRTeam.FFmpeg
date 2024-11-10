@@ -12,7 +12,7 @@ on:
       prefix_arch:
         required: false
         type: string
-        default: x86
+        default: x86-64
 
 # Global Settings
 # SCONS_CACHE for windows must be set in the build environment
