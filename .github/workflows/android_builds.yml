@@ -95,6 +95,9 @@ jobs:
           TARGET_ARCH: ${{ matrix.target_arch }}
         run: |
           make ffmpeg
+      - name: output log
+        run: |
+          cat ./ffmpeg-kit/build.log
 
       - name: Compilation
         uses: ./.github/actions/build
